@@ -22,10 +22,10 @@ const Navbar = () => {
           <div className="text-lg sm:text-xl">
             <Link to="/" style={{display:"flex", alignItems:"center"}}>
               <img
-                src="/assets/logo2.png" // Replace with your logo path
+                src="/assets/logo3.png" // Replace with your logo path
                 alt="Logo"
                 className="h-8 w-auto sm:h-10" // Adjust the height as needed
-                style={{width:"56px",height:"50px", marginLeft:"10px"}}
+                style={{width:"60px",height:"56px", marginRight:"15px"}}
               />
               <div className='flex'>
               <span className="text-[25px] text-gray-400">MARIYAAM</span>
