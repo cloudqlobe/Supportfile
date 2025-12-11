@@ -21,7 +21,7 @@ export default function ContactHeader() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-900 to-indigo-900 overflow-hidden ml-[-100px]">
+<div className="min-h-screen bg-gradient-to-r from-blue-900 to-indigo-900 overflow-hidden ml-0 lg:ml-[-100px]">
       <div className="max-w-7xl mx-auto px-6 py-20 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side Content */}
@@ -37,7 +37,7 @@ export default function ContactHeader() {
             </p>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+<div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold squared-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50 hover:scale-105">
                 <span className="relative z-10 flex items-center gap-2">
                   Get Started

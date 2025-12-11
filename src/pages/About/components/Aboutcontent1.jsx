@@ -1,14 +1,14 @@
-import { PhoneCall, Settings, ShieldCheck, Globe } from "lucide-react";
+import { PhoneCall, ShieldCheck, Globe } from "lucide-react";
 
 export default function AboutUsSections() {
   return (
     <section className="bg-white py-16 px-6">
       <div className="max-w-7xl mx-auto space-y-32">
 
-        {/* Section 1: About Us & Working Pattern (Content → Image) */}
-        <div className="grid md:grid-cols-2 items-center gap-12">
+        {/* Section 1: About Us & Working Pattern */}
+        <div className="flex flex-col md:grid md:grid-cols-2 md:items-center gap-12">
           {/* Content */}
-          <div className="space-y-6 max-w-xl">
+          <div className="space-y-6 max-w-xl order-1">
             <div className="flex items-center gap-3">
               <div className="bg-emerald-50 p-3 rounded-lg inline-flex">
                 <Globe className="w-8 h-8 text-emerald-400" />
@@ -26,28 +26,19 @@ export default function AboutUsSections() {
           </div>
 
           {/* Image */}
-          <div className="w-full">
+          <div className="w-full order-2 md:order-2">
             <img
               src="/assets/6180780.jpg"
               alt="About Us"
-              className="rounded-2xl w-full object-cover"
+              className="rounded-2xl w-full object-cover mt-6 md:mt-0"
             />
           </div>
         </div>
 
-        {/* Section 2: Service Quality (Image → Content) */}
-        <div className="grid md:grid-cols-2 items-center gap-12 md:flex-row-reverse">
-          {/* Image */}
-          <div className="w-full">
-            <img
-              src="/assets/5_communication02.jpg"
-              alt="Service Quality"
-              className="rounded-2xl  w-full object-cover"
-            />
-          </div>
-
+        {/* Section 2: Service Quality */}
+        <div className="flex flex-col md:grid md:grid-cols-2 md:items-center gap-12">
           {/* Content */}
-          <div className="space-y-6 max-w-xl">
+          <div className="space-y-6 max-w-xl order-1 md:order-2">
             <div className="flex items-center gap-3">
               <div className="bg-blue-50 p-3 rounded-lg inline-flex">
                 <ShieldCheck className="w-8 h-8 text-blue-500" />
@@ -63,12 +54,21 @@ export default function AboutUsSections() {
               From conference calls to customer service lines, we ensure smooth connectivity. Continuous updates, quality audits, and proactive troubleshooting help maintain superior service performance and customer satisfaction across every interaction.
             </p>
           </div>
+
+          {/* Image */}
+          <div className="w-full order-2 md:order-1">
+            <img
+              src="/assets/5_communication02.jpg"
+              alt="Service Quality"
+              className="rounded-2xl w-full object-cover mt-6 md:mt-0"
+            />
+          </div>
         </div>
 
-        {/* Section 3: Support & Assistance (Content → Image) */}
-        <div className="grid md:grid-cols-2 items-center gap-12">
+        {/* Section 3: Support & Assistance */}
+        <div className="flex flex-col md:grid md:grid-cols-2 md:items-center gap-12">
           {/* Content */}
-          <div className="space-y-6 max-w-xl">
+          <div className="space-y-6 max-w-xl order-1">
             <div className="flex items-center gap-3">
               <div className="bg-purple-50 p-3 rounded-lg inline-flex">
                 <PhoneCall className="w-8 h-8 text-purple-500" />
@@ -86,11 +86,11 @@ export default function AboutUsSections() {
           </div>
 
           {/* Image */}
-          <div className="w-full">
+          <div className="w-full order-2 md:order-2">
             <img
               src="/assets/6247730.jpg"
               alt="Support & Assistance"
-              className="rounded-2xl  w-full object-cover"
+              className="rounded-2xl w-full object-cover mt-6 md:mt-0"
             />
           </div>
         </div>

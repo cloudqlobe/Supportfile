@@ -6,10 +6,10 @@ export default function Servicescontent() {
     <section className="bg-white py-16 px-6">
       <div className="max-w-7xl mx-auto space-y-32">
 
-        {/* Section 1: CLI Routes (Content → Image) */}
-        <div className="grid md:grid-cols-2 items-center gap-12">
+        {/* Section 1: CLI Routes */}
+        <div className="flex flex-col md:grid md:grid-cols-2 md:items-center gap-12">
           {/* Content */}
-          <div className="space-y-6 max-w-xl">
+          <div className="space-y-6 max-w-xl order-1">
             <div className="flex items-center gap-3">
               <div className="bg-emerald-50 p-3 rounded-lg inline-flex">
                 <Globe className="w-8 h-8 text-emerald-400" />
@@ -33,28 +33,19 @@ export default function Servicescontent() {
           </div>
 
           {/* Image */}
-          <div className="w-full">
+          <div className="w-full order-2 md:order-2">
             <img
               src="/assets/5159816.jpg"
               alt="CLI Routes"
-              className="rounded-2xl w-full object-cover"
+              className="rounded-2xl w-full object-cover mt-6 md:mt-0"
             />
           </div>
         </div>
 
-        {/* Section 2: CC Routes (Image → Content) */}
-        <div className="grid md:grid-cols-2 items-center gap-12 md:flex-row-reverse">
-          {/* Image */}
-          <div className="w-full">
-            <img
-              src="/assets/7055173.jpg"
-              alt="CC Routes"
-              className="rounded-2xl w-full object-cover"
-            />
-          </div>
-
+        {/* Section 2: CC Routes */}
+        <div className="flex flex-col md:grid md:grid-cols-2 md:items-center gap-12">
           {/* Content */}
-          <div className="space-y-6 max-w-xl">
+          <div className="space-y-6 max-w-xl order-1 md:order-2">
             <div className="flex items-center gap-3">
               <div className="bg-blue-50 p-3 rounded-lg inline-flex">
                 <ShieldCheck className="w-8 h-8 text-blue-500" />
@@ -76,12 +67,21 @@ export default function Servicescontent() {
               supported regions.
             </p>
           </div>
+
+          {/* Image */}
+          <div className="w-full order-2 md:order-1">
+            <img
+              src="/assets/7055173.jpg"
+              alt="CC Routes"
+              className="rounded-2xl w-full object-cover mt-6 md:mt-0"
+            />
+          </div>
         </div>
 
-        {/* Section 3: Dialer Solutions (Content → Image) */}
-        <div className="grid md:grid-cols-2 items-center gap-12">
+        {/* Section 3: Dialer Solutions */}
+        <div className="flex flex-col md:grid md:grid-cols-2 md:items-center gap-12">
           {/* Content */}
-          <div className="space-y-6 max-w-xl">
+          <div className="space-y-6 max-w-xl order-1">
             <div className="flex items-center gap-3">
               <div className="bg-purple-50 p-3 rounded-lg inline-flex">
                 <Settings className="w-8 h-8 text-purple-500" />
@@ -104,11 +104,11 @@ export default function Servicescontent() {
           </div>
 
           {/* Image */}
-          <div className="w-full">
+          <div className="w-full order-2 md:order-2">
             <img
               src="/assets/6247730.jpg"
               alt="Dialer Solutions"
-              className="rounded-2xl w-full object-cover"
+              className="rounded-2xl w-full object-cover mt-6 md:mt-0"
             />
           </div>
         </div>

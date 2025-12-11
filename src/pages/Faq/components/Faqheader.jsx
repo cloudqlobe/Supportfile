@@ -54,10 +54,12 @@ export default function FAQHeader() {
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto px-6 py-20 lg:px-8 relative z-10 mt-[-60px] ml-[60px]">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Side Content */}
-          <div className="space-y-8">
+<div className="max-w-7xl mx-auto px-6 py-20 lg:px-8 relative z-10 mt-[-60px] ml-0 lg:ml-[60px]">
+  <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+    {/* Left Side Content */}
+    <div className="space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start">
+
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 backdrop-blur-sm rounded-full border border-purple-400/30">
               <Lightbulb className="w-4 h-4 text-yellow-400" />
               <span className="text-sm text-purple-200 font-medium">Knowledge Base</span>
@@ -85,7 +87,8 @@ export default function FAQHeader() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl" />
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+
               <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold squared-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-105">
                 <span className="relative z-10 flex items-center gap-2">
                   Browse All FAQs

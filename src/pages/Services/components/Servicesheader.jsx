@@ -15,20 +15,20 @@ export default function VoIPHeader() {
   }, []);
 
   return (
-   <div 
-  className="relative min-h-screen w-full bg-gradient-to-r from-blue-900 to-indigo-900 overflow-hidden "
-  onMouseMove={(e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    setMousePos({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top
-    });
-  }}
->
-    
+    <div
+      className="relative min-h-screen w-full bg-gradient-to-r from-blue-900 to-indigo-900 overflow-hidden "
+      onMouseMove={(e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        setMousePos({
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top
+        });
+      }}
+    >
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-20">
-        <div 
+        <div
           className="absolute w-96 h-96 bg-cyan-400 blur-3xl transition-all duration-1000"
           style={{
             top: '10%',
@@ -36,7 +36,7 @@ export default function VoIPHeader() {
             transform: `translate(${mousePos.x * 0.02}px, ${mousePos.y * 0.02}px)`
           }}
         />
-        <div 
+        <div
           className="absolute w-96 h-96 bg-purple-500 blur-3xl transition-all duration-1000"
           style={{
             bottom: '10%',
@@ -48,27 +48,27 @@ export default function VoIPHeader() {
 
       <div className="relative z-10 container mx-auto px-6 py-20 flex items-center min-h-screen">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-          
+
           {/* Left Content */}
-          <div className="space-y-8 ml-[40px]">
+          <div className="space-y-8 ml-0 md:ml-[40px] text-center md:text-left">
             <div className="inline-block">
               <span className="text-cyan-400 text-sm font-semibold tracking-wider uppercase bg-cyan-400/10 px-4 py-2 rounded-full border border-cyan-400/30">
-                About Our Company
+                Service Our Company
               </span>
             </div>
-            
+
             <h1 className="text-5xl lg:text-4xl font-bold text-white leading-relaxing">
               Connecting <span className=" text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-300">
-                 Conversations Worldwide
+                Conversations Worldwide
               </span>
-               
+
             </h1>
-            
+
             <p className="text-xl text-blue-200 leading-relaxed max-w-xl">
               Empowering businesses with cutting-edge VoIP solutions that transform communication, enhance collaboration, and drive growth in the digital age.
             </p>
-            
-            <div className="flex flex-wrap gap-4">
+
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <button className="group relative px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105">
                 <span className="relative z-10 flex items-center gap-2">
                   Get Started
@@ -77,7 +77,7 @@ export default function VoIPHeader() {
                   </svg>
                 </span>
               </button>
-              
+
               <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 hover:scale-105">
                 Get Connected
               </button>
@@ -100,13 +100,13 @@ export default function VoIPHeader() {
           </div>
 
           {/* Right Animated Design - Phone Dialer */}
-          <div className="relative h-96 lg:h-full flex items-center justify-center mt-[-70px]">
+          <div className="relative h-96 lg:h-full hidden lg:flex items-center justify-center mt-[-70px]">
             <div className="relative perspective-1000">
               {/* Phone Device Mockup */}
               <div className="relative w-80 h-[600px] bg-gradient-to-br from-gray-900 to-gray-800 rounded-[3rem] shadow-2xl border-8 border-gray-800 overflow-hidden transform rotate-y-5">
                 {/* Phone Notch */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-7 bg-gray-900 rounded-b-3xl z-20"></div>
-                
+
                 {/* Status Bar */}
                 <div className="absolute top-2 left-0 right-0 flex justify-between items-center px-8 text-white text-xs z-10">
                   <span>9:41</span>
@@ -122,7 +122,7 @@ export default function VoIPHeader() {
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 pt-10">
                   {/* Call Interface */}
                   <div className="flex flex-col items-center justify-between h-full py-8 px-6">
-                    
+
                     {/* Contact Info */}
                     <div className="text-center space-y-3 animate-slideDown">
                       <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full mx-auto flex items-center justify-center animate-pulse">
@@ -146,8 +146,8 @@ export default function VoIPHeader() {
                         <span className="text-gray-300 text-sm">Quality</span>
                         <div className="flex gap-1">
                           {[1, 2, 3, 4].map((i) => (
-                            <div 
-                              key={i} 
+                            <div
+                              key={i}
                               className={`w-2 h-4 rounded-full ${i <= 3 ? 'bg-emerald-400' : 'bg-gray-600'}`}
                               style={{ height: `${i * 4 + 8}px` }}
                             ></div>
