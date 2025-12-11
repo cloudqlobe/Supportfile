@@ -132,62 +132,69 @@ const VoIPFooter = () => {
         </div>
 
         {/* Newsletter Section */}
-        <div className="bg-white/5 backdrop-blur-sm border-2 border-emerald-400/30 rounded-3xl p-8 mb-12 hover:border-emerald-400 transition-all duration-300">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h4 className="text-2xl font-bold text-white mb-2">Stay Updated</h4>
-              <p className="text-blue-200">Subscribe to our newsletter for the latest updates and offers.</p>
-            </div>
-            <div className="flex gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 bg-white/10 border border-emerald-400/30 rounded-xl px-4 py-3 text-white placeholder-blue-300 focus:outline-none focus:border-emerald-400 transition-colors"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-xl text-white font-bold hover:shadow-lg hover:shadow-emerald-400/50 transition-all duration-300 hover:scale-105 flex items-center gap-2">
-                Subscribe
-                <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
+<div className="bg-white/5 backdrop-blur-sm border-2 border-emerald-400/30 rounded-3xl p-8 mb-12 hover:border-emerald-400 transition-all duration-300">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+    <div>
+      <h4 className="text-2xl font-bold text-white mb-2">Stay Updated</h4>
+      <p className="text-blue-200">Subscribe to our newsletter for the latest updates and offers.</p>
+    </div>
+
+    <div className="flex flex-col md:flex-row gap-3 w-full md:w-auto justify-center md:justify-end">
+      <input
+        type="email"
+        placeholder="Enter your email"
+        className="flex-1 bg-white/10 border border-emerald-400/30 rounded-xl px-4 py-3 text-white placeholder-blue-300 focus:outline-none focus:border-emerald-400 transition-colors"
+      />
+
+      <button className="px-6 py-3 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-xl text-white font-bold hover:shadow-lg hover:shadow-emerald-400/50 transition-all duration-300 hover:scale-105 flex items-center gap-2">
+        Subscribe
+        <ArrowRight className="w-5 h-5" />
+      </button>
+    </div>
+
+  </div>
+</div>
 
         {/* Bottom Section */}
-        <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            {/* Copyright */}
-            <div className="text-blue-300 text-sm">
-              © {currentYear} <span className="font-bold text-white">VoIPConnect</span>. All rights reserved.
-            </div>
+<div className="border-t border-white/10 pt-8">
+  <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
 
-            {/* Social Links */}
-            <div className="flex items-center gap-3">
-              <span className="text-blue-300 text-sm font-semibold mr-2">Follow Us:</span>
-              {socialLinks.map((social, index) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className={`w-10 h-10 bg-white/10 backdrop-blur-sm border border-emerald-400/30 rounded-xl flex items-center justify-center text-white ${social.color} hover:border-emerald-400 hover:scale-110 transition-all duration-300`}
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                );
-              })}
-            </div>
+    {/* Copyright */}
+    <div className="text-blue-300 text-sm">
+      © {currentYear} <span className="font-bold text-white">VoIPConnect</span>. All rights reserved.
+    </div>
 
-            {/* Legal Links */}
-            <div className="flex items-center gap-6 text-sm">
-              <a href="#" className="text-blue-300 hover:text-emerald-400 transition-colors font-medium">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-blue-300 hover:text-emerald-400 transition-colors font-medium">
-                Terms of Service
-              </a>
-            </div>
-          </div>
-        </div>
+    {/* Social Links */}
+    <div className="flex items-center gap-3 justify-center">
+      <span className="text-blue-300 text-sm font-semibold mr-2">Follow Us:</span>
+      {socialLinks.map((social, index) => {
+        const Icon = social.icon;
+        return (
+          <a
+            key={index}
+            href={social.href}
+            className={`w-10 h-10 bg-white/10 backdrop-blur-sm border border-emerald-400/30 rounded-xl flex items-center justify-center text-white ${social.color} hover:border-emerald-400 hover:scale-110 transition-all duration-300`}
+          >
+            <Icon className="w-5 h-5" />
+          </a>
+        );
+      })}
+    </div>
+
+    {/* Legal Links */}
+    <div className="flex items-center justify-center gap-6 text-sm">
+      <a href="#" className="text-blue-300 hover:text-emerald-400 transition-colors font-medium">
+        Privacy Policy
+      </a>
+      <a href="#" className="text-blue-300 hover:text-emerald-400 transition-colors font-medium">
+        Terms of Service
+      </a>
+    </div>
+
+  </div>
+</div>
+
       </div>
 
       <style jsx>{`

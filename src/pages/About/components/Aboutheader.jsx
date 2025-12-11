@@ -26,7 +26,7 @@ export default function VoIPHeader() {
   }, []);
 
   return (
-    <div 
+    <div
       className="relative min-h-screen bg-gradient-to-r from-blue-900 to-indigo-900 overflow-hidden"
       onMouseMove={(e) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -38,7 +38,7 @@ export default function VoIPHeader() {
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-20">
-        <div 
+        <div
           className="absolute w-96 h-96 bg-cyan-400 blur-3xl transition-all duration-1000"
           style={{
             top: '10%',
@@ -46,7 +46,7 @@ export default function VoIPHeader() {
             transform: `translate(${mousePos.x * 0.02}px, ${mousePos.y * 0.02}px)`
           }}
         />
-        <div 
+        <div
           className="absolute w-96 h-96 bg-purple-500 blur-3xl transition-all duration-1000"
           style={{
             bottom: '10%',
@@ -58,28 +58,28 @@ export default function VoIPHeader() {
 
       <div className="relative z-10 container mx-auto px-6 py-20 flex items-center min-h-screen">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-          
+
           {/* Left Content */}
-          <div className="space-y-8 ml-[50px]">
+<div className="space-y-8 ml-0 md:ml-[50px] text-center md:text-left">
             <div className="inline-block">
               <span className="text-cyan-400 text-sm font-semibold tracking-wider uppercase bg-cyan-400/10 px-4 py-2 rounded-full border border-cyan-400/30">
                 About Our Company
               </span>
             </div>
-            
+
             <h1 className="text-5xl lg:text-4xl font-bold text-white leading-relaxing">
               Connecting <span className=" text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-300"> conversations worldwide
-              
-             
+
+
               </span>
-            
+
             </h1>
-            
+
             <p className="text-xl text-blue-200 leading-relaxed max-w-xl">
               Empowering businesses with cutting-edge VoIP solutions that transform communication, enhance collaboration, and drive growth in the digital age.
             </p>
-            
-            <div className="flex flex-wrap gap-4">
+
+<div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <button className="group relative px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105">
                 <span className="relative z-10 flex items-center gap-2">
                   Get Started
@@ -88,7 +88,7 @@ export default function VoIPHeader() {
                   </svg>
                 </span>
               </button>
-              
+
               <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 hover:scale-105">
                 Get Connected
               </button>
@@ -111,17 +111,17 @@ export default function VoIPHeader() {
           </div>
 
           {/* Right Animated Design */}
-          <div className="relative h-96 mt-[-50px] lg:h-full flex items-center justify-center">
+          <div className="hidden lg:flex relative h-96 mt-[-50px] lg:h-full items-center justify-center">
             <div className="relative w-full max-w-md">
               {/* Glassmorphic Container */}
               <div className="relative backdrop-blur-xl bg-white/5 rounded-3xl p-8 border border-white/10 shadow-2xl">
-                
+
                 {/* Central Hub with Glow Effect */}
                 <div className="relative flex items-center justify-center mb-8">
                   {/* Outer Glow Rings */}
                   <div className="absolute w-48 h-48 rounded-full bg-cyan-500/20 animate-ping" style={{ animationDuration: '3s' }} />
                   <div className="absolute w-40 h-40 rounded-full bg-cyan-400/30 animate-pulse" />
-                  
+
                   {/* Main Hub */}
                   <div className="relative w-32 h-32 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-500/50">
                     <div className="absolute inset-2 bg-gradient-to-br from-cyan-300 to-blue-600 rounded-full animate-spin" style={{ animationDuration: '8s' }} />
@@ -146,12 +146,12 @@ export default function VoIPHeader() {
                     >
                       {/* Card Glow */}
                       <div className={`absolute inset-0 bg-gradient-to-br ${item.color} rounded-xl blur-md opacity-0 group-hover:opacity-60 transition-opacity duration-300`} />
-                      
+
                       {/* Card */}
                       <div className={`relative h-24 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/20 shadow-lg transform transition-all duration-500 ${pulseStates[i % 3] ? 'scale-105' : 'scale-100'}`}>
                         <item.icon className="w-8 h-8 text-white drop-shadow" />
                       </div>
-                      
+
                       {/* Connection Dots */}
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <div className="w-1 h-1 bg-white rounded-full animate-ping" style={{ animationDelay: item.delay }} />
@@ -169,12 +169,12 @@ export default function VoIPHeader() {
                       Active
                     </span>
                   </div>
-                  
+
                   {/* Animated Progress Bar */}
                   <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                     <div className="h-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full animate-pulse" style={{ width: '85%' }} />
                   </div>
-                  
+
                   <div className="flex justify-between text-xs text-blue-300">
                     <span>Bandwidth</span>
                     <span>85% Available</span>
@@ -203,7 +203,7 @@ export default function VoIPHeader() {
               <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-pink-400 to-rose-500 rounded-2xl flex items-center justify-center shadow-lg shadow-pink-500/50 animate-bounce" style={{ animationDuration: '3s' }}>
                 <Radio className="w-8 h-8 text-white" />
               </div>
-              
+
               <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/50 animate-bounce" style={{ animationDuration: '4s', animationDelay: '0.5s' }}>
                 <Wifi className="w-8 h-8 text-white" />
               </div>

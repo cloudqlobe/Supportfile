@@ -4,7 +4,7 @@ export default function ContentSection2() {
       <div className="max-w-7xl mx-auto flex flex-col gap-20">
 
         {/* MAIN HEADING */}
-        <div className="text-center mb-16">
+        <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             Advanced Dialer Solutions for Modern Businesses
           </h2>
