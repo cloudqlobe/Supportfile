@@ -60,27 +60,25 @@ export default function VoIPHeader() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
 
           {/* Left Content */}
-<div className="space-y-8 ml-0 md:ml-[50px] text-center md:text-left">
-            <div className="inline-block">
+          <div className="space-y-8 z-10 ml-0 lg:ml-[82px]">
+            <div style={{ display: "block" }} className="inline-block text-center lg:text-left">
               <span className="text-cyan-400 text-sm font-semibold tracking-wider uppercase bg-cyan-400/10 px-4 py-2 rounded-full border border-cyan-400/30">
                 About Our Company
               </span>
             </div>
 
-            <h1 className="text-5xl lg:text-4xl font-bold text-white leading-relaxing">
+            <h1 className="text-[35px] lg:text-4xl font-light text-white leading-tight text-center lg:text-left">
               Connecting <span className=" text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-300"> conversations worldwide
-
-
               </span>
-
             </h1>
 
-            <p className="text-xl text-blue-200 leading-relaxed max-w-xl">
-              Empowering businesses with cutting-edge VoIP solutions that transform communication, enhance collaboration, and drive growth in the digital age.
-            </p>
+            <p
+              className="mb-4 text-[17px] leading-relaxed text-gray-300 text-justify"
+              style={{ textAlign: "justify" }}
+            >              Maryaam Telecom is committed to redefining the future of business communication. We combine powerful VoIP technology with world-class reliability to help companies connect with customers and teams effortlessly. Our mission is to provide secure, scalable, and high-quality voice solutions backed by 24/7 expert support.            </p>
 
-<div className="flex flex-wrap gap-4 justify-center md:justify-start">
-              <button className="group relative px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105">
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+              <button className="group relative px-8 py-4 bg-cyan-500 text-white font-semibold overflow-hidden transition-all duration-300 hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105">
                 <span className="relative z-10 flex items-center gap-2">
                   Get Started
                   <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,12 +87,12 @@ export default function VoIPHeader() {
                 </span>
               </button>
 
-              <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 hover:scale-105">
                 Get Connected
               </button>
             </div>
 
-            <div className="flex gap-8 pt-4">
+            <div className="flex items-center justify-center lg:justify-start gap-8 pt-6 text-blue-200">
               <div className="text-white">
                 <div className="text-3xl font-bold">500+</div>
                 <div className="text-blue-300 text-sm">Global Clients</div>

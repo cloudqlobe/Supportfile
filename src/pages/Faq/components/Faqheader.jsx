@@ -54,11 +54,11 @@ export default function FAQHeader() {
         }
       `}</style>
 
-<div className="max-w-7xl mx-auto px-6 py-20 lg:px-8 relative z-10 mt-[-60px] ml-0 lg:ml-[60px]">
-  <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-6 py-20 lg:px-8 relative z-10 mt-[-60px] ml-0 lg:ml-[60px]">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-    {/* Left Side Content */}
-    <div className="space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start">
+          {/* Left Side Content */}
+          <div style={{marginLeft:"21px"}} className="space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start">
 
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 backdrop-blur-sm rounded-full border border-purple-400/30">
               <Lightbulb className="w-4 h-4 text-yellow-400" />
@@ -66,23 +66,26 @@ export default function FAQHeader() {
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-4xl font-bold text-white leading-tight">
-                Got <span className=" bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+              <h1 className="text-[35px] lg:text-4xl font-light text-white leading-tight text-center lg:text-left">
+                Got<span style={{ marginLeft: "10px" }} className=" bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
                   Questions?
                 </span>
               </h1>
-              <p className="text-xl text-purple-200 leading-relaxed max-w-xl">
-                Find answers to commonly asked questions. We're here to help you understand everything you need to know.
+            <p
+              className="mb-4 text-[17px] leading-relaxed text-gray-300 text-justify"
+              style={{ textAlign: "justify" }}
+            >                Have questions? We’ve gathered everything you need to know about our VoIP platform.
+                From setup to calling features, you’ll find clear and helpful answers here.
               </p>
             </div>
 
             {/* Search Bar */}
-            <div className="relative group">
+            <div className="relative group w-[325px] sm:w-[440px]">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-purple-400 z-10" />
               <input
                 type="text"
                 placeholder="Search for answers..."
-                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-md border-2 border-white/20 rounded-2xl text-white placeholder-purple-300 focus:outline-none focus:border-purple-400 focus:bg-white/15 transition-all duration-300"
+                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-md border-2 border-white/20 text-white placeholder-purple-300 focus:outline-none focus:border-purple-400 focus:bg-white/15 transition-all duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl" />
             </div>
@@ -108,7 +111,7 @@ export default function FAQHeader() {
           {/* Right Side Animated Design */}
           <div className="relative h-[600px] hidden lg:block">
             {/* Large Question Mark Circle */}
-            <div 
+            <div
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80"
               style={{
                 transform: `translate(-50%, -50%) scale(${pulseScale})`,
@@ -120,10 +123,10 @@ export default function FAQHeader() {
                 <div className="absolute inset-0 border-4 border-purple-400/30 rounded-full animate-spin" style={{ animationDuration: '20s' }} />
                 <div className="absolute inset-8 border-4 border-pink-400/30 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
                 <div className="absolute inset-16 border-4 border-blue-400/30 rounded-full animate-spin" style={{ animationDuration: '10s' }} />
-                
+
                 {/* Center glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full blur-3xl opacity-40" />
-                
+
                 {/* Question mark */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <HelpCircle className="w-40 h-40 text-white drop-shadow-2xl" strokeWidth={1.5} />

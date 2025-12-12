@@ -5,10 +5,12 @@ export default function ContentSection2() {
 
         {/* MAIN HEADING */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Roboto, sans-serif' }}>
-             Premium VoIP Solutions for Businesses
+          <h2 className="text-4xl md:text-3xl font-default text-black leading-tight whitespace-normal" style={{ fontSize: "35px", fontWeight: "300" }}>
+            Advanced VoIP Services Designed To Transform Your{" "}
+            <span className="text-transparent bg-clip-text bg-blue-700">
+              Business Communication
+            </span>
           </h2>
-          
         </div>
 
         {/* SERVICE 1 — IMAGE LEFT, CONTENT RIGHT */}
@@ -22,7 +24,7 @@ export default function ContentSection2() {
           </div>
 
           <div className="md:w-1/2 text-gray-800">
-            <h3 className="text-3xl font-bold mb-4 text-gray-900" style={{ fontFamily: 'Roboto, sans-serif' }}>
+            <h3 className="text-3xl mb-4 text-gray-900" style={{ fontFamily: 'Roboto, sans-serif', fontWeight:"300" }}>
               CC Voice Routes
             </h3>
 

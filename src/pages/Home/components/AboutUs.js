@@ -28,15 +28,15 @@ export default function AboutUs() {
 
         {/* Top Section */}
         <div className="flex flex-col md:flex-row items-center gap-12">
-          
-          {/* Left Content */}
-        <div className="md:w-1/2">
-  <h2 className="text-4xl font-semibold mb-6 leading-tight">
-    <span className="text-gray-800">About Our </span>
-    <span className="text-orange-500">VoIP Services</span>
-  </h2>
 
-            <p className="text-gray-600 text-lg leading-relaxed text-justify">
+          {/* Left Content */}
+          <div className="md:w-1/2">
+            <h2 className="text-4xl font-[300] mb-6 leading-tight">
+              <span className="text-gray-800">About Our </span>
+              <span className="text-orange-500">VoIP Services</span>
+            </h2>
+
+            <p className="mb-4 text-[17px] leading-relaxed text-gray-700 text-justify" style={{ textAlign: "justify" }}>             
               We provide enterprise-grade VoIP communication solutions designed
               to deliver exceptional call quality, high reliability, and secure
               global connectivity for modern businesses. Our advanced network

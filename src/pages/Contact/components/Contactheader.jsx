@@ -21,24 +21,31 @@ export default function ContactHeader() {
   }, []);
 
   return (
-<div className="min-h-screen bg-gradient-to-r from-blue-900 to-indigo-900 overflow-hidden ml-0 lg:ml-[-100px]">
+    <div className="min-h-screen bg-gradient-to-r from-blue-900 to-indigo-900 overflow-hidden ml-0 lg:ml-[-100px]">
       <div className="max-w-7xl mx-auto px-6 py-20 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side Content */}
           <div className="space-y-8 z-10">
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-4xl font-bold text-white leading-tight">
-                Let's Start a <span className=" bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              <h1 className="text-[35px] lg:text-4xl font-light text-white leading-tight text-center lg:text-left">
+                Let’s Start The
+                <span className="ml-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Conversation
                 </span>
               </h1>
-            <p className="text-xl text-blue-200 leading-relaxed max-w-xl">
-              Empowering businesses with cutting-edge VoIP solutions that transform communication, enhance collaboration, and drive growth in the digital age.
-            </p>
+
+            <p
+              className="mb-4 text-[17px] leading-relaxed text-gray-300 text-justify"
+              style={{ textAlign: "justify" }}
+            >                Empowering businesses with cutting-edge VoIP solutions that transform communication, enhance collaboration, and drive growth in the digital age.
+                With scalable infrastructure, crystal-clear call quality, advanced analytics, and seamless integrations, we deliver a communication experience designed for speed, reliability, and global reach.              </p>
             </div>
 
-<div className="flex flex-wrap gap-4 justify-center md:justify-start">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold squared-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50 hover:scale-105">
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+              <button
+                style={{ width: "202px" }}
+                className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold squared-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50 hover:scale-105"
+              >
                 <span className="relative z-10 flex items-center gap-2">
                   Get Started
                   <Zap className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -54,23 +61,26 @@ export default function ContactHeader() {
               </button>
             </div>
 
-            <div className="flex items-center gap-8 pt-6 text-blue-200">
+            <div className="flex items-center justify-center lg:justify-start gap-8 pt-6 text-blue-200">
               <div>
                 <div className="text-3xl font-bold text-white">500+</div>
                 <div className="text-sm">Projects Delivered</div>
               </div>
+
               <div className="w-px h-12 bg-blue-400/30" />
+
               <div>
                 <div className="text-3xl font-bold text-white">98%</div>
                 <div className="text-sm">Client Satisfaction</div>
               </div>
             </div>
+
           </div>
 
           {/* Right Side Animated Design */}
           <div className="relative h-[600px] hidden lg:block ml-[100px] mt-[-80px]">
             {/* Central Orb */}
-            <div 
+            <div
               className="absolute top-1/2 left-1/2 w-64 h-64 -translate-x-1/2 -translate-y-1/2"
               style={{
                 transform: `translate(-50%, calc(-50% + ${Math.sin(float * Math.PI / 180) * 20}px))`
@@ -100,7 +110,7 @@ export default function ContactHeader() {
               const x = Math.cos(angle) * radius;
               const y = Math.sin(angle) * radius;
               const IconComponent = item.Icon;
-              
+
               return (
                 <div
                   key={i}
@@ -119,7 +129,7 @@ export default function ContactHeader() {
             {/* Decorative Circles */}
             <div className="absolute top-20 right-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-2xl animate-pulse" />
             <div className="absolute bottom-32 left-20 w-40 h-40 bg-blue-500/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
-            
+
             {/* Grid Pattern Overlay */}
             <div className="absolute inset-0 opacity-10" style={{
               backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),

@@ -81,29 +81,27 @@ const VoIPLandingHeader = () => {
         </div>
       </div>
 
-<div className="relative z-10 max-w-7xl mx-auto px-8 py-20 mt-[-40px] ml-0 md:ml-[50px]">
+      <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 mt-[-40px] ml-0 md:ml-[50px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
 
           {/* Left Side Content */}
-          <div className="space-y-8 animate-slideInLeft mt-6 text-center lg:text-left">
+          <div style={{ marginLeft: "21px" }} className="space-y-8 animate-slideInLeft mt-6 text-center lg:text-left">
 
-            <h1 className="text-4xl md:text-5xl font-default text-white leading-tight whitespace-normal">
-              Connect{" "}
+            <h1 className="text-4xl md:text-3xl font-default text-white leading-tight whitespace-normal" style={{ fontSize: "35px", fontWeight: "300" }}>
+              The Future Of{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow to-yellow-400">
-                Globally
-              </span>{" "}
-              Instantly
+                Communication
+              </span>
             </h1>
 
-            <p className="text-lg text-blue-200 leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Reliable, high-quality VoIP solutions enabling seamless global voice
-              communication with low latency and superior clarity.
+            <p className="mb-4 text-[17px] leading-relaxed text-gray-300 text-justify" style={{ textAlign: "justify" }}>             
+              Maryaam Telecom delivers crystal-clear VoIP calling built for modern businesses. Our platform makes it easy to connect teams across locations with HD voice quality, smart call routing, and effortless scalability.
             </p>
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
               <button className="group px-8 py-4 bg-gradient-to-r from-emerald-400 to-teal-400 
-                       text-blue-950 rounded-xl font-semibold text-lg 
+                       text-blue-950 font-semibold text-lg 
                        hover:shadow-2xl hover:shadow-emerald-400/50 
                        transition-all duration-300 hover:scale-105 
                        flex items-center gap-2">
@@ -113,9 +111,9 @@ const VoIPLandingHeader = () => {
 
               <button className="px-8 py-4 bg-white/10 backdrop-blur-sm 
                        border-2 border-emerald-400 text-white 
-                       rounded-xl font-semibold text-lg 
+                       font-semibold text-lg 
                        hover:bg-white/20 transition-all duration-300 
-                       hover:scale-105">
+                       hover:scale-105 w-[214px]">
                 Request Test
               </button>
             </div>

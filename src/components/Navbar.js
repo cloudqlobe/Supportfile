@@ -140,10 +140,12 @@ const Navbar = () => {
       )}
 
       {/* MOBILE MENU */}
-      <div
-        className={`fixed top-0 right-0 h-full w-80 ... transform transition-transform z-50 lg:hidden ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-      >
+<div
+  className={`fixed top-0 right-0 h-full w-80 bg-indigo-900/95 backdrop-blur-lg transform transition-transform duration-300 z-50 lg:hidden ${
+    isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+  }`}
+>
+
         {/* Mobile Menu Header */}
         <div className="flex items-center justify-between p-6 border-b border-white/10">
           <div className="text-xl font-bold text-white">
