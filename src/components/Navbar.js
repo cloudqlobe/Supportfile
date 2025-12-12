@@ -20,23 +20,23 @@ const Navbar = () => {
 
           {/* LEFT — LOGO */}
           <div className="text-lg sm:text-xl">
-            <Link to="/" style={{display:"flex", alignItems:"center"}}>
+            <Link to="/" style={{ display: "flex", alignItems: "center" }}>
               <img
                 src="/assets/logo3.png" // Replace with your logo path
                 alt="Logo"
                 className="h-8 w-auto sm:h-10" // Adjust the height as needed
-                style={{width:"60px",height:"56px", marginRight:"15px"}}
+                style={{ width: "60px", height: "56px", marginRight: "15px" }}
               />
-              <div className='flex'>
-              <span className="text-[25px] text-gray-400">MARIYAAM</span>
-               <span className='text-[25px] text-yellow-400 ml-2'>TELECOM</span>
+              <div className='flex hide-brand-text'>
+                <span className="text-[25px] text-gray-400">MARIYAAM</span>
+                <span className='text-[25px] text-yellow-400 ml-2'>TELECOM</span>
               </div>
             </Link>
           </div>
 
 
           {/* CENTER — DESKTOP MENU */}
-          <ul className="hidden md:flex items-center space-x-8 lg:space-x-10 text-white font-medium">
+          <ul className="hidden lg:flex items-center space-x-8 lg:space-x-10 text-white font-medium">
             <li>
               <Link
                 to="/"
@@ -89,7 +89,7 @@ const Navbar = () => {
           </ul>
 
           {/* RIGHT — DESKTOP SOCIAL ICONS */}
-          <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
+          <div className="hidden lg:flex items-center space-x-3 lg:space-x-4">
             <a href="#" className="transform hover:-translate-y-1 transition-transform duration-200 group">
               <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
                 <MessageCircle className="text-white w-5 h-5" />
@@ -118,7 +118,7 @@ const Navbar = () => {
           {/* MOBILE MENU BUTTON */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors duration-200"
+            className="lg:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors duration-200"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -141,7 +141,7 @@ const Navbar = () => {
 
       {/* MOBILE MENU */}
       <div
-        className={`fixed top-0 right-0 h-full w-80 bg-gradient-to-b from-blue-900 to-indigo-900 backdrop-blur-md shadow-2xl transform transition-transform duration-300 ease-in-out z-50 md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-0 right-0 h-full w-80 ... transform transition-transform z-50 lg:hidden ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
         {/* Mobile Menu Header */}
@@ -159,7 +159,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Content */}
-        <div className="flex-1 flex flex-col p-4 pt-6 overflow-y-auto">
+        <div className="flex-1 flex flex-col p-4 pt-6 overflow-y-auto"   style={{ backgroundColor: "#312e81" }}>
           {/* Mobile Navigation Links */}
           <nav className="space-y-4 mb-8">
             <Link
@@ -253,6 +253,17 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+      @media (max-width: 391px) {
+  .hide-brand-text {
+    display: none;
+  }
+}
+
+      `}
+
+      </style>
     </>
   );
 };
