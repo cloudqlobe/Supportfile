@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Radio, Wifi } from 'lucide-react';
 
-export default function VoIPHeader() {
+export default function VoIPHeader({ onContactClick }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [pulseStates, setPulseStates] = useState([true, false, true]);
 
@@ -78,8 +78,8 @@ export default function VoIPHeader() {
             >              Maryaam Telecom is committed to redefining the future of business communication. We combine powerful VoIP technology with world-class reliability to help companies connect with customers and teams effortlessly. Our mission is to provide secure, scalable, and high-quality voice solutions backed by 24/7 expert support.            </p>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <button className="group relative px-8 py-4 bg-cyan-500 text-white font-semibold overflow-hidden transition-all duration-300 hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105">
-                <span className="relative z-10 flex items-center gap-2">
+              <button onClick={onContactClick} className="group relative px-8 py-4 bg-cyan-500 text-white font-semibold overflow-hidden transition-all duration-300 hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105">
+                <span className="relative z-10 flex items-center gap-2" >
                   Get Started
                   <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -87,7 +87,9 @@ export default function VoIPHeader() {
                 </span>
               </button>
 
-              <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 hover:scale-105"
+                onClick={onContactClick}
+              >
                 Get Connected
               </button>
             </div>

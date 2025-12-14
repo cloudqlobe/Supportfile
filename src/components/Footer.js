@@ -1,14 +1,24 @@
-import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Globe2, PhoneCall, Settings, Headphones, MessageSquare, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, PhoneCall, Settings, Headphones, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const VoIPFooter = () => {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const quickLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'About Us', href: '#' },
-    { name: 'Contact', href: '#' },
-    { name: 'FAQ', href: '#' }
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'FAQ', path: '/faq' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   const services = [
@@ -20,7 +30,7 @@ const VoIPFooter = () => {
   const socialLinks = [
     { icon: Facebook, href: '#', color: 'hover:text-blue-400' },
     { icon: Twitter, href: '#', color: 'hover:text-sky-400' },
-    { icon: Linkedin, href: '#', color: 'hover:text-blue-500' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/arshad-khan-7481482b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', color: 'hover:text-blue-500' },
     { icon: Instagram, href: '#', color: 'hover:text-pink-400' },
     { icon: Youtube, href: '#', color: 'hover:text-red-500' }
   ];
@@ -29,10 +39,10 @@ const VoIPFooter = () => {
     <footer className="relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-indigo-900">
-       
+
 
         {/* Floating Particles */}
-      
+
 
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
@@ -86,16 +96,17 @@ const VoIPFooter = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <button
+                    onClick={() => handleNavigation(link.path)}
                     className="group flex items-center gap-2 text-blue-200 hover:text-emerald-400 transition-all duration-300"
                   >
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform" />
                     <span className="font-medium">{link.name}</span>
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
+
           </div>
 
           {/* Services */}
@@ -132,68 +143,70 @@ const VoIPFooter = () => {
         </div>
 
         {/* Newsletter Section */}
-<div className="bg-white/5 backdrop-blur-sm border-2 border-emerald-400/30 rounded-3xl p-8 mb-12 hover:border-emerald-400 transition-all duration-300">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="bg-white/5 backdrop-blur-sm border-2 border-emerald-400/30 rounded-3xl p-8 mb-12 hover:border-emerald-400 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-    <div>
-      <h4 className="text-2xl font-bold text-white mb-2">Stay Updated</h4>
-      <p className="text-blue-200">Subscribe to our newsletter for the latest updates and offers.</p>
-    </div>
+            <div>
+              <h4 className="text-2xl font-bold text-white mb-2">Stay Updated</h4>
+              <p className="text-blue-200">Subscribe to our newsletter for the latest updates and offers.</p>
+            </div>
 
-    <div className="flex flex-col md:flex-row gap-3 w-full md:w-auto justify-center md:justify-end">
-      <input
-        type="email"
-        placeholder="Enter your email"
-        className="flex-1 bg-white/10 border border-emerald-400/30 rounded-xl px-4 py-3 text-white placeholder-blue-300 focus:outline-none focus:border-emerald-400 transition-colors"
-      />
+            <div className="flex flex-col md:flex-row gap-3 w-full md:w-auto justify-center md:justify-end">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 bg-white/10 border border-emerald-400/30 rounded-xl px-4 py-3 text-white placeholder-blue-300 focus:outline-none focus:border-emerald-400 transition-colors"
+              />
 
-      <button className="px-6 py-3 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-xl text-white font-bold hover:shadow-lg hover:shadow-emerald-400/50 transition-all duration-300 hover:scale-105 flex items-center gap-2">
-        Subscribe
-        <ArrowRight className="w-5 h-5" />
-      </button>
-    </div>
+              <button className="px-6 py-3 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-xl text-white font-bold hover:shadow-lg hover:shadow-emerald-400/50 transition-all duration-300 hover:scale-105 flex items-center gap-2">
+                Subscribe
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
 
-  </div>
-</div>
+          </div>
+        </div>
 
         {/* Bottom Section */}
-<div className="border-t border-white/10 pt-8">
-  <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
 
-    {/* Copyright */}
-    <div className="text-blue-300 text-sm">
-      © {currentYear} <span className="font-bold text-white">VoIPConnect</span>. All rights reserved.
-    </div>
+            {/* Copyright */}
+            <div className="text-blue-300 text-sm">
+              © {currentYear} <span className="font-bold text-white">VoIPConnect</span>. All rights reserved.
+            </div>
 
-    {/* Social Links */}
-    <div className="flex items-center gap-3 justify-center">
-      <span className="text-blue-300 text-sm font-semibold mr-2">Follow Us:</span>
-      {socialLinks.map((social, index) => {
-        const Icon = social.icon;
-        return (
-          <a
-            key={index}
-            href={social.href}
-            className={`w-10 h-10 bg-white/10 backdrop-blur-sm border border-emerald-400/30 rounded-xl flex items-center justify-center text-white ${social.color} hover:border-emerald-400 hover:scale-110 transition-all duration-300`}
-          >
-            <Icon className="w-5 h-5" />
-          </a>
-        );
-      })}
-    </div>
+            {/* Social Links */}
+            <div className="flex items-center gap-3 justify-center">
+              <span className="text-blue-300 text-sm font-semibold mr-2">Follow Us:</span>
+              {socialLinks.map((social, index) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-10 h-10 bg-white/10 backdrop-blur-sm border border-emerald-400/30 rounded-xl flex items-center justify-center text-white ${social.color} hover:border-emerald-400 hover:scale-110 transition-all duration-300`}
+                  >
+                    <Icon className="w-5 h-5" />
+                  </a>
+                );
+              })}
+            </div>
 
-    {/* Legal Links */}
-    <div className="flex items-center justify-center gap-6 text-sm">
-      <a href="#" className="text-blue-300 hover:text-emerald-400 transition-colors font-medium">
-        Privacy Policy
-      </a>
-      <a href="#" className="text-blue-300 hover:text-emerald-400 transition-colors font-medium">
-        Terms of Service
-      </a>
-    </div>
+            {/* Legal Links */}
+            <div className="flex items-center justify-center gap-6 text-sm">
+              <a href="#" className="text-blue-300 hover:text-emerald-400 transition-colors font-medium">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-blue-300 hover:text-emerald-400 transition-colors font-medium">
+                Terms of Service
+              </a>
+            </div>
 
-  </div>
-</div>
+          </div>
+        </div>
 
       </div>
 

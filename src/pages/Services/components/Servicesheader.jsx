@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Radio, Wifi } from 'lucide-react';
 
-export default function VoIPHeader() {
+export default function VoIPHeader({ onContactClick }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -80,7 +80,7 @@ export default function VoIPHeader() {
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <button className="group relative px-8 py-4 bg-cyan-500 text-white font-semibold overflow-hidden transition-all duration-300 hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105">
+              <button onClick={onContactClick} className="group relative px-8 py-4 bg-cyan-500 text-white font-semibold overflow-hidden transition-all duration-300 hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105">
                 <span className="relative z-10 flex items-center gap-2">
                   Get Started
                   <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +89,9 @@ export default function VoIPHeader() {
                 </span>
               </button>
 
-              <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 hover:scale-105">
+              <button
+                onClick={onContactClick}
+                className="px-8 py-4 border-2 border-white/30 text-white font-semibold backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 hover:scale-105">
                 Get Connected
               </button>
             </div>

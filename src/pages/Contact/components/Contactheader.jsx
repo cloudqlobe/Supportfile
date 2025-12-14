@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Send, Sparkles, Globe, Zap, Mail, MessageSquare, Phone, Users, Rocket, Heart } from 'lucide-react';
 
-export default function ContactHeader() {
+export default function ContactHeader({onContactClick}) {
   const [float, setFloat] = useState(0);
   const [rotate, setRotate] = useState(0);
 
@@ -43,18 +43,18 @@ export default function ContactHeader() {
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <button
-                style={{ width: "202px" }}
+                style={{ width: "202px" }} onClick={onContactClick}
                 className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold squared-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50 hover:scale-105"
               >
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative z-10 flex items-center gap-2" >
                   Get Started
                   <Zap className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
 
-              <button className="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold squared-full border-2 border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
-                <span className="flex items-center gap-2">
+              <button onClick={onContactClick} className="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold squared-full border-2 border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
+                <span className="flex items-center gap-2" >
                   Get Connected
                   <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </span>

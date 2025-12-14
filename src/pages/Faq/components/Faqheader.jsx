@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { HelpCircle, Search, Lightbulb, BookOpen, Zap, Shield } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-export default function FAQHeader() {
+export default function FAQHeader({onContactClick}) {
+    const navigate = useNavigate();
   const [particles, setParticles] = useState([]);
   const [pulseScale, setPulseScale] = useState(1);
 
@@ -92,14 +94,16 @@ export default function FAQHeader() {
 
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
 
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold squared-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-105">
+              <button onClick={onContactClick} className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold squared-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-105">
                 <span className="relative z-10 flex items-center gap-2">
                   Browse All FAQs
                   <BookOpen className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 </span>
               </button>
 
-              <button className="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold squared-full border-2 border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
+              <button
+                      onClick={() => navigate("/contact")}
+              className="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold squared-full border-2 border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
                 <span className="flex items-center gap-2">
                   Contact Support
                   <Zap className="w-5 h-5 group-hover:animate-pulse" />

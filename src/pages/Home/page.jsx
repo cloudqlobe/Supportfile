@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import ContactSection from "./components/ContactSection";
 import FeaturesSection from "./components/FeaturesSection";
 import ContentSection2 from "./components/ContentSection2";
@@ -7,16 +8,30 @@ import Header from "./components/Header";
 import FAQSection from "./components/Faqhome";
 
 export default function Home() {
+  const contactRef = useRef(null);
+
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Header onContactClick={scrollToContact} />
+
       <AboutUs />
       <FeaturesSection />
       <ContentSection1 />
-      <ContactSection />
+
+      {/* Contact Section */}
+      <div ref={contactRef}>
+        <ContactSection />
+      </div>
+
       <ContentSection2 />
-      <FAQSection/>
+      <FAQSection />
     </div>
   );
 }

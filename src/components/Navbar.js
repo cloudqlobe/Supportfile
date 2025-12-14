@@ -96,8 +96,12 @@ const Navbar = () => {
               </div>
             </a>
 
-            <a href="#" className="transform hover:-translate-y-1 transition-transform duration-200 group">
-              <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
+            <a
+              href="https://www.linkedin.com/in/arshad-khan-7481482b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform hover:-translate-y-1 transition-transform duration-200 group"
+            >              <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
                 <Linkedin className="text-white w-5 h-5" />
               </div>
             </a>
@@ -140,11 +144,10 @@ const Navbar = () => {
       )}
 
       {/* MOBILE MENU */}
-<div
-  className={`fixed top-0 right-0 h-full w-80 bg-indigo-900/95 backdrop-blur-lg transform transition-transform duration-300 z-50 lg:hidden ${
-    isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-  }`}
->
+      <div
+        className={`fixed top-0 right-0 h-full w-80 bg-indigo-900/95 backdrop-blur-lg transform transition-transform duration-300 z-50 lg:hidden ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+      >
 
         {/* Mobile Menu Header */}
         <div className="flex items-center justify-between p-6 border-b border-white/10">
@@ -161,7 +164,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Content */}
-        <div className="flex-1 flex flex-col p-4 pt-6 overflow-y-auto"   style={{ backgroundColor: "#312e81" }}>
+        <div className="flex-1 flex flex-col p-4 pt-6 overflow-y-auto" style={{ backgroundColor: "#312e81" }}>
           {/* Mobile Navigation Links */}
           <nav className="space-y-4 mb-8">
             <Link
@@ -223,7 +226,9 @@ const Navbar = () => {
               </a>
 
               <a
-                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/arshad-khan-7481482b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 className="transform hover:-translate-y-1 transition-transform duration-200 group p-2 rounded-lg hover:bg-white/10"
                 onClick={closeMobileMenu}
               >

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Wifi, Signal, Globe2, Radio, Headphones, PhoneCall, PhoneIncoming, User } from 'lucide-react';
 
-const VoIPLandingHeader = () => {
+const VoIPLandingHeader = ({onContactClick }) => {
   const [callState, setCallState] = useState('idle');
   const [dialedNumber, setDialedNumber] = useState('');
   const [activeRing, setActiveRing] = useState(0);
@@ -94,7 +94,7 @@ const VoIPLandingHeader = () => {
               </span>
             </h1>
 
-            <p className="mb-4 text-[17px] leading-relaxed text-gray-300 text-justify" style={{ textAlign: "justify" }}>             
+            <p className="mb-4 text-[17px] leading-relaxed text-gray-300 text-justify" style={{ textAlign: "justify" }}>
               Maryaam Telecom delivers crystal-clear VoIP calling built for modern businesses. Our platform makes it easy to connect teams across locations with HD voice quality, smart call routing, and effortless scalability.
             </p>
 
@@ -104,7 +104,9 @@ const VoIPLandingHeader = () => {
                        text-blue-950 font-semibold text-lg 
                        hover:shadow-2xl hover:shadow-emerald-400/50 
                        transition-all duration-300 hover:scale-105 
-                       flex items-center gap-2">
+                       flex items-center gap-2"
+                onClick={onContactClick}
+              >
                 Get Connected
                 <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
               </button>
@@ -113,7 +115,9 @@ const VoIPLandingHeader = () => {
                        border-2 border-emerald-400 text-white 
                        font-semibold text-lg 
                        hover:bg-white/20 transition-all duration-300 
-                       hover:scale-105 w-[214px]">
+                       hover:scale-105 w-[214px]"
+                onClick={onContactClick}
+              >
                 Request Test
               </button>
             </div>
