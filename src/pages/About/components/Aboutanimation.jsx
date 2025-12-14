@@ -15,7 +15,7 @@ export default function VoIPFeatures() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Our VoIP Services</h2>
+          <h2 className="text-4xl mb-4">Our VoIP Services</h2>
           <p className="text-lg text-gray-300">Reliable, efficient, and tailored for your business needs</p>
         </div>
 
