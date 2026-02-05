@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import Faqheader from './components/Faqheader'
 import FAQPage from './components/Faqquestion'
 
-const page = () => {
+const FaqPage = () => {
   const contactRef = useRef(null);
 
   const scrollToContact = () => {
@@ -21,4 +21,4 @@ const page = () => {
   )
 }
 
-export default page
+export default FaqPage

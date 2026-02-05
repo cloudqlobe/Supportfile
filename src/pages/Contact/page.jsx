@@ -3,7 +3,7 @@ import Contactheader from './components/Contactheader'
 import Contactconnect from './components/Contactconnect'
 
 
-const page = () => {
+const ContactPage = () => {
   const contactRef = useRef(null);
 
   const scrollToContact = () => {
@@ -23,4 +23,4 @@ const page = () => {
   )
 }
 
-export default page
+export default ContactPage

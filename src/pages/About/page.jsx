@@ -4,7 +4,7 @@ import Aboutconnect from './components/Aboutconnect'
 import Aboutanimation from './components/Aboutanimation'
 import Aboutcontent1 from './components/Aboutcontent1'
 
-const page = () => {
+const AboutPage = () => {
   const contactRef = useRef(null);
 
   const scrollToContact = () => {
@@ -26,4 +26,4 @@ const page = () => {
   )
 }
 
-export default page
+export default AboutPage
