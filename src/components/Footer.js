@@ -28,7 +28,7 @@ const VoIPFooter = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', color: 'hover:text-blue-400' },
+    { icon: Facebook, href: 'https://www.facebook.com/mariyaamtelecom?rdid=a09H8QZ4bBYr27LW&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Hx4ZydpPs%2F#', color: 'hover:text-blue-400' },
     { icon: Twitter, href: '#', color: 'hover:text-sky-400' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/arshad-khan-7481482b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', color: 'hover:text-blue-500' },
     { icon: Instagram, href: '#', color: 'hover:text-pink-400' },
@@ -70,13 +70,13 @@ const VoIPFooter = () => {
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-emerald-400/20 transition-colors">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span>+1 (800) 123-4567</span>
+                <span>+44 7476680398</span>
               </div>
               <div className="flex items-center gap-3 text-blue-200 hover:text-emerald-400 transition-colors group">
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-emerald-400/20 transition-colors">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span>info@voipconnect.com</span>
+                <span>sales@mariyaamtelecom.com</span>
               </div>
               <div className="flex items-center gap-3 text-blue-200 hover:text-emerald-400 transition-colors group">
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-emerald-400/20 transition-colors">

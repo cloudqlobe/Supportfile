@@ -25,8 +25,8 @@ const ContactSection = () => {
               </div>  
               <div>  
                 <h4 className="font-semibold text-lg mb-1">Email Us</h4>  
-                <p className="text-blue-100">sales@teleconnect.com</p>  
-                <p className="text-blue-100">support@teleconnect.com</p>  
+                <p className="text-blue-100">sales@mariyaamtelecom.com</p>  
+                <p className="text-blue-100">support@mariyaamtelecom</p>  
               </div>  
             </div>  
   
@@ -38,8 +38,8 @@ const ContactSection = () => {
               </div>  
               <div>  
                 <h4 className="font-semibold text-lg mb-1">Call Us</h4>  
-                <p className="text-xl font-semibold">+1 (555) 123-4567</p>  
-                <p className="text-blue-100">Mon - Fri: 9AM - 6PM EST</p>  
+                <p>+44 7476680398</p>  
+                <p>+44 7449769921</p>  
               </div>  
             </div>  
   

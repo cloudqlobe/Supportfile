@@ -1,9 +1,8 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import Aboutheader from './components/Aboutheader'
 import Aboutconnect from './components/Aboutconnect'
 import Aboutanimation from './components/Aboutanimation'
 import Aboutcontent1 from './components/Aboutcontent1'
-import ContactSection from '../Home/components/ContactSection'
 
 const page = () => {
   const contactRef = useRef(null);

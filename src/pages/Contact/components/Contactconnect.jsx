@@ -110,7 +110,7 @@ export default function ContactPage() {
               <Phone className="text-white" size={28} />
             </div>
             <h3 className="font-bold text-gray-800 mb-2 text-lg">Phone</h3>
-            <p className="text-gray-600 font-medium">+1 (555) 123-4567</p>
+            <p className="text-gray-600 font-medium">+44 7449769921</p>
           </div>
 
           <div className="group bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl shadow-md p-8 hover:shadow-2xl transition-all duration-300 border border-purple-200 hover:scale-105">
@@ -118,7 +118,7 @@ export default function ContactPage() {
               <Mail className="text-white" size={28} />
             </div>
             <h3 className="font-bold text-gray-800 mb-2 text-lg">Email</h3>
-            <p className="text-gray-600 font-medium">contact@example.com</p>
+            <p className="text-gray-600 font-medium">sales@mariyaamtelecom.com</p>
           </div>
 
           <div className="group bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl shadow-md p-8 hover:shadow-2xl transition-all duration-300 border border-pink-200 hover:scale-105">

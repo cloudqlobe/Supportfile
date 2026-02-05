@@ -112,7 +112,9 @@ const Navbar = () => {
               </div>
             </a>
 
-            <a href="#" className="transform hover:-translate-y-1 transition-transform duration-200 group">
+            <a
+            target="_blank"
+             href="https://www.facebook.com/mariyaamtelecom?rdid=a09H8QZ4bBYr27LW&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Hx4ZydpPs%2F#" className="transform hover:-translate-y-1 transition-transform duration-200 group">
               <div className="w-8 h-8 rounded-full bg-blue-700 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
                 <Facebook className="text-white w-5 h-5" />
               </div>
