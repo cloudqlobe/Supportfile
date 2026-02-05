@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, PhoneCall, Settings, Headphones, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Twitter, Send, Linkedin, Instagram, Youtube, PhoneCall, Settings, Headphones, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const VoIPFooter = () => {
@@ -32,7 +32,8 @@ const VoIPFooter = () => {
     { icon: Twitter, href: '#', color: 'hover:text-sky-400' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/arshad-khan-7481482b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', color: 'hover:text-blue-500' },
     { icon: Instagram, href: '#', color: 'hover:text-pink-400' },
-    { icon: Youtube, href: '#', color: 'hover:text-red-500' }
+    { icon: Youtube, href: '#', color: 'hover:text-red-500' },
+    { icon: Send, href: "https://t.me/mariyaamtelecom", color: "hover:text-cyan-400" },
   ];
 
   return (
