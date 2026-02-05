@@ -6,14 +6,6 @@ export default function VoIPHeader({ onContactClick }) {
   const [pulseStates, setPulseStates] = useState([true, false, true]);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      const rect = e.currentTarget.getBoundingClientRect();
-      setMousePos({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top
-      });
-    };
-
     const interval = setInterval(() => {
       setPulseStates(prev => [
         !prev[0],

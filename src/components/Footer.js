@@ -197,10 +197,10 @@ const VoIPFooter = () => {
 
             {/* Legal Links */}
             <div className="flex items-center justify-center gap-6 text-sm">
-              <a href="#" className="text-blue-300 hover:text-emerald-400 transition-colors font-medium">
+              <a href="/" className="text-blue-300 hover:text-emerald-400 transition-colors font-medium">
                 Privacy Policy
               </a>
-              <a href="#" className="text-blue-300 hover:text-emerald-400 transition-colors font-medium">
+              <a href="/" className="text-blue-300 hover:text-emerald-400 transition-colors font-medium">
                 Terms of Service
               </a>
             </div>

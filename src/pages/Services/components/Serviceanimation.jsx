@@ -33,7 +33,7 @@ export default function TelecomServices() {
       setActiveCard((prev) => (prev + 1) % services.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [services?.length]);
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-900 to-indigo-900 p-8 flex items-center justify-center">
