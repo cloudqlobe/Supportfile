@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import Faqheader from './components/Faqheader'
 import FAQPage from './components/Faqquestion'
 

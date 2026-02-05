@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Phone, Users, BarChart3, Shield, Cloud, Headphones, Video, MessageSquare, Settings, Globe } from 'lucide-react';
 
 const VoIPFeatures = () => {

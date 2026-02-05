@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Send, Sparkles, Globe, Zap, Mail, MessageSquare, Phone, Users, Rocket, Heart } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Send, Globe, Zap, Mail, MessageSquare, Phone, Users, Rocket, Heart } from 'lucide-react';
 
 export default function ContactHeader({onContactClick}) {
   const [float, setFloat] = useState(0);

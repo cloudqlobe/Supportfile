@@ -5,7 +5,6 @@ import {
   Globe,
   BarChart2,
   ChevronDown,
-  Headphones
 } from "lucide-react";
 import { useState } from "react";
 

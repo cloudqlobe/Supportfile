@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Phone, Radio, Headphones, Network, Globe, Server } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Radio, Headphones, Network, Globe } from 'lucide-react';
 
 export default function TelecomServices() {
   const [activeCard, setActiveCard] = useState(0);

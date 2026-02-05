@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Phone, Radio, Wifi } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Phone, Wifi } from 'lucide-react';
 
 export default function VoIPHeader({ onContactClick }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
