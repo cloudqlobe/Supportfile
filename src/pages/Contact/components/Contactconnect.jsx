@@ -126,7 +126,7 @@ export default function ContactPage() {
               <MapPin className="text-white" size={28} />
             </div>
             <h3 className="font-bold text-gray-800 mb-2 text-lg">Location</h3>
-            <p className="text-gray-600 font-medium">Thrissur, Kerala, IN</p>
+            <p className="text-gray-600 font-medium">San Francisco, CA 94102</p>
           </div>
         </div>
 

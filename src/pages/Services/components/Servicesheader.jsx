@@ -137,7 +137,7 @@ export default function VoIPHeader({ onContactClick }) {
                       </div>
                       <div>
                         <h3 className="text-white text-xl font-semibold">John Smith</h3>
-                        <p className="text-gray-400 text-sm">+1 (555) 123-4567</p>
+                        <p className="text-gray-400 text-sm">+44 7476680398</p>
                       </div>
                     </div>
 

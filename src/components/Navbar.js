@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Linkedin, Instagram, Facebook, MessageCircle, X, Menu } from "lucide-react";
+import { Linkedin, Facebook, MessageCircle, X, Menu, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -90,11 +90,17 @@ const Navbar = () => {
 
           {/* RIGHT — DESKTOP SOCIAL ICONS */}
           <div className="hidden lg:flex items-center space-x-3 lg:space-x-4">
-            <a href="/" className="transform hover:-translate-y-1 transition-transform duration-200 group">
+            <a
+              href="https://wa.me/447476680398"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform hover:-translate-y-1 transition-transform duration-200 group"
+            >
               <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
                 <MessageCircle className="text-white w-5 h-5" />
               </div>
             </a>
+
 
             <a
               href="https://www.linkedin.com/in/arshad-khan-7481482b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
@@ -106,14 +112,20 @@ const Navbar = () => {
               </div>
             </a>
 
-            <a href="/" className="transform hover:-translate-y-1 transition-transform duration-200 group">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
-                <Instagram className="text-white w-5 h-5" />
+            <a
+              href="https://t.me/mariyaamtelecom"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform hover:-translate-y-1 transition-transform duration-200 group"
+            >
+              <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
+                <Send className="text-white w-5 h-5" />
               </div>
             </a>
 
+
             <a
-             href="https://www.facebook.com/mariyaamtelecom?rdid=a09H8QZ4bBYr27LW&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Hx4ZydpPs%2F#" className="transform hover:-translate-y-1 transition-transform duration-200 group">
+              href="https://www.facebook.com/mariyaamtelecom?rdid=a09H8QZ4bBYr27LW&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Hx4ZydpPs%2F#" className="transform hover:-translate-y-1 transition-transform duration-200 group">
               <div className="w-8 h-8 rounded-full bg-blue-700 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
                 <Facebook className="text-white w-5 h-5" />
               </div>
@@ -217,7 +229,9 @@ const Navbar = () => {
 
             <div className="flex justify-center space-x-4">
               <a
-                href="/"
+                href="https://wa.me/447476680398"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transform hover:-translate-y-1 transition-transform duration-200 group p-2 rounded-lg hover:bg-white/10"
                 onClick={closeMobileMenu}
               >
@@ -225,6 +239,7 @@ const Navbar = () => {
                   <MessageCircle className="text-white w-5 h-5" />
                 </div>
               </a>
+
 
               <a
                 target="_blank"
@@ -239,14 +254,17 @@ const Navbar = () => {
               </a>
 
               <a
-                href="/"
+                href="https://t.me/mariyaamtelecom"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transform hover:-translate-y-1 transition-transform duration-200 group p-2 rounded-lg hover:bg-white/10"
                 onClick={closeMobileMenu}
               >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
-                  <Instagram className="text-white w-5 h-5" />
+                <div className="w-10 h-10 rounded-full bg-sky-500 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
+                  <Send className="text-white w-5 h-5" />
                 </div>
               </a>
+
 
               <a
                 href="/"
